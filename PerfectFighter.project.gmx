@@ -47,7 +47,6 @@
       <sprite>sprites\spr_healthbar_inner</sprite>
       <sprite>sprites\spr_healthbar_bg</sprite>
     </sprites>
-    <sprite>sprites\spr_empty</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_wall_jump</sprite>
@@ -64,6 +63,7 @@
     <sprite>sprites\spr_spike</sprite>
     <sprite>sprites\spr_controls</sprite>
     <sprite>sprites\spr_door</sprite>
+    <sprite>sprites\spr_arrow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -77,9 +77,11 @@
   <scripts name="scripts">
     <script>scripts\scr_text.gml</script>
     <script>scripts\scr_death.gml</script>
+    <script>scripts\scr_menu.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\font0</font>
+    <font>fonts\fn1</font>
+    <font>fonts\fn_menu</font>
   </fonts>
   <objects name="objects">
     <objects name="object_characters">
@@ -89,12 +91,7 @@
       <object>objects\obj_boss_front</object>
     </objects>
     <objects name="obj_buttons">
-      <object>objects\obj_play</object>
-      <object>objects\obj_option</object>
-      <object>objects\obj_exit</object>
-      <object>objects\obj_back_button</object>
       <object>objects\obj_restart</object>
-      <object>objects\obj_control_button</object>
       <object>objects\obj_pause</object>
     </objects>
     <objects name="obj_music_bt">
@@ -105,7 +102,6 @@
       <object>objects\obj_music3</object>
       <object>objects\obj_music4</object>
     </objects>
-    <object>objects\obj_empty</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_wall_jump</object>
@@ -130,13 +126,13 @@
     <object>objects\obj_door1</object>
     <object>objects\obj_portal3</object>
     <object>objects\obj_portal4</object>
+    <object>objects\obj_menu</object>
+    <object>objects\obj_empty</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_tittle</room>
-    <room>rooms\rm_menu</room>
-    <room>rooms\rm_controls</room>
-    <room>rooms\rm_option</room>
+    <room>rooms\rm_menu1</room>
     <room>rooms\rm_1</room>
     <room>rooms\rm_2</room>
     <room>rooms\rm_music</room>

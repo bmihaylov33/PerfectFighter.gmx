@@ -92,6 +92,8 @@ if (global.checkpointR == room)
             <kind>1</kind>
             <string>///Movement
 
+if (global.pause) exit;
+
 //Get the player's input
 key_right = keyboard_check(vk_right) or keyboard_check(ord("D"));
 key_left = -keyboard_check(vk_left);// or keyboard_check(ord("A")); 
