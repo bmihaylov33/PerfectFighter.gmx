@@ -51,7 +51,7 @@ bonus = 0;
           <argument>
             <kind>1</kind>
             <string>if (place_meeting(x,y,obj_player)) {
-    room_goto_next();
+    room_goto(bonus_rm1);
     bonus = 1;    
 }
 

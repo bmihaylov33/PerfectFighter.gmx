@@ -75,9 +75,9 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_text.gml</script>
     <script>scripts\scr_death.gml</script>
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_loadgame.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fn1</font>
@@ -93,21 +93,12 @@
     <objects name="obj_buttons">
       <object>objects\obj_restart</object>
       <object>objects\obj_pause</object>
-    </objects>
-    <objects name="obj_music_bt">
       <object>objects\obj_sound</object>
-      <object>objects\obj_music</object>
-      <object>objects\obj_music1</object>
-      <object>objects\obj_music2</object>
-      <object>objects\obj_music3</object>
-      <object>objects\obj_music4</object>
     </objects>
     <object>objects\obj_bullet</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_wall_jump</object>
-    <object>objects\obj_lives</object>
     <object>objects\obj_bullet1</object>
-    <object>objects\cont_main</object>
     <object>objects\obj_timer</object>
     <object>objects\obj_timer2</object>
     <object>objects\obj_powerup</object>
@@ -126,16 +117,22 @@
     <object>objects\obj_door1</object>
     <object>objects\obj_portal3</object>
     <object>objects\obj_portal4</object>
+    <object>objects\obj_arrow</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_empty</object>
+    <objects name="object_health">
+      <object>objects\obj_lives</object>
+      <object>objects\obj_hb_border</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_tittle</room>
-    <room>rooms\rm_menu1</room>
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_1</room>
     <room>rooms\rm_2</room>
-    <room>rooms\rm_music</room>
+    <room>rooms\bonus_rm1</room>
+    <room>rooms\rm_3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

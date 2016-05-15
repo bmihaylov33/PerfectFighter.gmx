@@ -3,7 +3,7 @@
   <spriteName>spr_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>spr_enemy</maskName>
@@ -193,25 +193,22 @@ if (lives == 0 ) {
     <event eventtype="4" ename="obj_portal3">
       <action>
         <libid>1</libid>
-        <id>109</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move_to</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>obj_portal4.x</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>obj_portal4.y</string>
+            <kind>1</kind>
+            <string>room_goto(rm_3);
+</string>
           </argument>
         </arguments>
       </action>
@@ -234,6 +231,8 @@ if (lives == 0 ) {
           <argument>
             <kind>1</kind>
             <string>scr_death();
+
+
 </string>
           </argument>
         </arguments>
@@ -242,25 +241,22 @@ if (lives == 0 ) {
     <event eventtype="4" ename="obj_portal">
       <action>
         <libid>1</libid>
-        <id>109</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move_to</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>obj_portal2.x</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>obj_portal2.y</string>
+            <kind>1</kind>
+            <string>room_goto(rm_2);
+</string>
           </argument>
         </arguments>
       </action>
@@ -335,7 +331,7 @@ hp -= 50;
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -352,8 +348,14 @@ hp -= 50;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
-//draw_healthbar(x-25, y-65, x+25, y-59, hp, c_black, c_red, c_green, 0, true, false);
+            <string>if (file_exists("Save.sav")) file_delete("Save.sav");
+
+var SaveFile = file_text_open_write("Save.sav");
+var SavedRoom =  room;
+file_text_write_real(SaveFile,SavedRoom);
+file_text_close(SaveFile);
+
+
 </string>
           </argument>
         </arguments>
