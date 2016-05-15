@@ -149,6 +149,7 @@ draw_healthbar(x-25, y-45, x+25, y-39, hp, c_black, c_red, c_green, 0, true, fal
             <string>///Health
 if (hp == 0) {
     instance_destroy();
+    //score += 40;
 }
 </string>
           </argument>

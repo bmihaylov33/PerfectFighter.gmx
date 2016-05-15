@@ -132,12 +132,12 @@ if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_right)) {
         case 1: //The play menu
             switch(current) {
                 case 1: 
-                    show_message("You are about to resume a game!");
+                    //show_message("You are about to resume a game!");
                     scr_loadgame();
                 break;
                 
                 case 2: 
-                    show_message("You are about to create a new game!");
+                    //show_message("You are about to create a new game!");
                     room_goto_next();
                 break;
                 

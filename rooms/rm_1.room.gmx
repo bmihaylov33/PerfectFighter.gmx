@@ -84,7 +84,7 @@
     <instance objName="obj_wall" x="560" y="896" name="inst_6CAA883F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="560" y="864" name="inst_B419DF01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="624" y="832" name="inst_FD156C8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_restart" x="656" y="64" name="inst_CA115ACD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_restart" x="192" y="32" name="inst_CA115ACD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="624" y="896" name="inst_60ABCD78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lives" x="112" y="32" name="inst_F9240363" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hb_border" x="128" y="32" name="inst_219C3F53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

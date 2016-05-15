@@ -217,7 +217,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_death();
+            <string>room_restart();
 </string>
           </argument>
         </arguments>

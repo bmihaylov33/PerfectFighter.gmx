@@ -61,9 +61,14 @@
     <sprite>sprites\spr_nasko2</sprite>
     <sprite>sprites\spr_fwall</sprite>
     <sprite>sprites\spr_spike</sprite>
+    <sprite>sprites\spr_spike1</sprite>
     <sprite>sprites\spr_controls</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_arrow</sprite>
+    <sprite>sprites\spr_sound_chk</sprite>
+    <sprite>sprites\spr_sound_chk1</sprite>
+    <sprite>sprites\spr_pause_txt</sprite>
+    <sprite>sprites\spr_text</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -80,7 +85,6 @@
     <script>scripts\scr_loadgame.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\fn1</font>
     <font>fonts\fn_menu</font>
   </fonts>
   <objects name="objects">
@@ -94,36 +98,37 @@
       <object>objects\obj_restart</object>
       <object>objects\obj_pause</object>
       <object>objects\obj_sound</object>
+      <object>objects\obj_sound_check</object>
+      <object>objects\obj_empty</object>
     </objects>
-    <object>objects\obj_bullet</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_wall_jump</object>
-    <object>objects\obj_bullet1</object>
-    <object>objects\obj_timer</object>
-    <object>objects\obj_timer2</object>
-    <object>objects\obj_powerup</object>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_enemy_nofall</object>
-    <object>objects\obj_portal</object>
-    <object>objects\obj_text</object>
-    <object>objects\obj_checkpoint</object>
-    <object>objects\obj_portal2</object>
-    <object>objects\obj_nasko</object>
-    <object>objects\obj_nasko2</object>
-    <object>objects\obj_fwall</object>
-    <object>objects\obj_spike</object>
-    <object>objects\obj_text_box</object>
-    <object>objects\obj_door</object>
-    <object>objects\obj_door1</object>
-    <object>objects\obj_portal3</object>
-    <object>objects\obj_portal4</object>
-    <object>objects\obj_arrow</object>
-    <object>objects\obj_menu</object>
-    <object>objects\obj_empty</object>
     <objects name="object_health">
       <object>objects\obj_lives</object>
       <object>objects\obj_hb_border</object>
     </objects>
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_enemy_nofall</object>
+    <object>objects\obj_bullet</object>
+    <object>objects\obj_bullet1</object>
+    <object>objects\obj_arrow</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_wall_jump</object>
+    <object>objects\obj_fwall</object>
+    <object>objects\obj_portal</object>
+    <object>objects\obj_portal2</object>
+    <object>objects\obj_portal3</object>
+    <object>objects\obj_portal4</object>
+    <object>objects\obj_spike</object>
+    <object>objects\obj_spike1</object>
+    <object>objects\obj_powerup</object>
+    <object>objects\obj_checkpoint</object>
+    <object>objects\obj_door</object>
+    <object>objects\obj_door1</object>
+    <object>objects\obj_text_box</object>
+    <object>objects\obj_text_jump</object>
+    <object>objects\obj_pause_txt</object>
+    <object>objects\obj_nasko</object>
+    <object>objects\obj_nasko2</object>
+    <object>objects\obj_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
