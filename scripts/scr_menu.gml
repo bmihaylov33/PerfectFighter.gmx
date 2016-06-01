@@ -1,4 +1,4 @@
-/*switch (current) {
+switch (current) {
     case 0:
             switch(current) {
                 case 1:
@@ -20,12 +20,12 @@
         case 1: //The play menu
             switch(current) {
                 case 1: 
-                    //show_message("You are about to resume a game!");
+                    show_message("You are about to resume a game!");
                     room_goto_next();
                 break;
                 
                 case 2: 
-                    //show_message("You are about to create a new game!");
+                    show_message("You are about to create a new game!");
                     room_goto_next();
                 break;
                 
@@ -47,7 +47,7 @@
                     window_set_fullscreen(0);
                     show_message("Fullscreen Off!");
                 break;*/
-   /*             
+                
                 case 1:
                     show_message("Currently not available");
                 break;
@@ -63,4 +63,4 @@
                 break;    
             }
             break;
-}*/
+}

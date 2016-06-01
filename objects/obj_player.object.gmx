@@ -45,6 +45,7 @@ if (global.checkpointR == room)
     x = global.checkpointx;
     y = global.checkpointy;
 }
+
 </string>
           </argument>
         </arguments>
@@ -183,7 +184,7 @@ if (hp == 0) {
 
 if (lives == 0 ) {
     instance_destroy();
-    scr_death();
+    room_restart();
 }
 </string>
           </argument>
@@ -208,6 +209,42 @@ if (lives == 0 ) {
           <argument>
             <kind>1</kind>
             <string>scr_death();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_portal5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>myName = get_string("Enter your name for the highscore list: ","Player1");
+highscore_add(myName, score);
+
+ini_open("score.ini");
+for (var i=1; i&lt;=10; i++)
+{
+    ini_write_string("Save", "name" + string(i), highscore_name(i));
+    ini_write_string("Save", "value" + string(i), string(highscore_value(i)));
+}
+ini_close();
+
+score = 0;
+
+room_goto(rm_highscore_table);
 </string>
           </argument>
         </arguments>
@@ -254,30 +291,6 @@ if (lives == 0 ) {
           <argument>
             <kind>1</kind>
             <string>room_goto(rm_2);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_bullet">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Health
-hp -= 50;
 </string>
           </argument>
         </arguments>

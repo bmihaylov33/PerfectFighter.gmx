@@ -15,6 +15,18 @@ global.checkpointR = 0;
 global.checkpointx = 0;
 global.checkpointy = 0;
 
+highscore_clear();
+
+ini_open("score.ini");
+for (var i=1; i&lt;=10; i++)
+{
+    var name = ini_read_string("Save", "name" + string(i), "");
+    var value = ini_read_real("Save", "value" + string(i), 0);
+    if value != 0
+        highscore_add(name, value);
+}
+ini_close();
+
 room_goto_next();</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>

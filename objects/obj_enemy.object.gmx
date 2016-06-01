@@ -80,22 +80,20 @@ if (global.pause) exit;
 hsp = dir * movespeed;
 vsp += grav;
 
+//move = facing ;
+
 //Horizontal Collision
 if (place_meeting(x+hsp,y,obj_wall))
 {
     while(!place_meeting(x+sign(hsp),y,obj_wall))
     {
-        x += sign(hsp); 
+        x += sign(hsp);        
     }
     hsp = 0;
     
     dir *= -1;
-    
-    if hsp&gt;0 {facing=1;}
-else if hsp&lt;0 {facing=-1;}
 }
 x += hsp;
-
 //Vertical Collision
 if (place_meeting(x,y+vsp,obj_wall))
 {
@@ -113,13 +111,27 @@ y += vsp;
 //Enemy Collision
 if (place_meeting(x,y,obj_player)) {
     if (obj_player.y &lt; y-16) {
-        with (obj_player) vsp = -jumpspeed ;
+        with (obj_player) vsp = -jumpspeed;
     } else {
         health -= 1;
         //scr_death();
     }
 }
 
+/*//Facing
+if (x &gt; 0) {
+    facing = 180;
+}
+else if (x &lt; 0) {
+    facing = 0;
+}
+
+
+//Animate
+if (move != 0) image_xscale = move;
+if (place_meeting(x,y+1,obj_wall)) {
+    if (move !=0) sprite_index = spr_blue_enemy_left; else sprite_index = spr_blue_enemy
+}*/
 </string>
           </argument>
         </arguments>
@@ -176,7 +188,7 @@ if (place_meeting(x,y,obj_player)) {
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>facing</string>
           </argument>
         </arguments>
       </action>
@@ -222,8 +234,10 @@ if (place_meeting(x,y,obj_player)) {
           <argument>
             <kind>1</kind>
             <string>///Health Bar
-draw_self();
+draw_sprite_ext(spr_blue_enemy,-1,x,y,facing,1,0,c_white,1);
 draw_healthbar(x-25, y-45, x+25, y-39, hp, c_black, c_red, c_green, 0, true, false);
+
+//draw_sprite_ext(spr_blue_enemy,-1,x,y,facing,1,0,c_white,1);
 </string>
           </argument>
         </arguments>
@@ -247,7 +261,7 @@ draw_healthbar(x-25, y-45, x+25, y-39, hp, c_black, c_red, c_green, 0, true, fal
             <string>///Health
 if (hp == 0) {
     instance_destroy();
-    //score += 20;
+    score += 20;
 }
 </string>
           </argument>
