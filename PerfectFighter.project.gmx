@@ -149,6 +149,7 @@
     <room>rooms\rm_3</room>
     <room>rooms\bonus_rm2</room>
     <room>rooms\rm_highscore_table</room>
+    <room>rooms\room10</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
