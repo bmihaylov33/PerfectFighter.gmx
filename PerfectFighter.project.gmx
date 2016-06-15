@@ -66,9 +66,8 @@
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\sprite40</sprite>
-    <sprite>sprites\spr_textbox</sprite>
-    <sprite>sprites\spr_button_accept</sprite>
     <sprite>sprites\spr_menu_player</sprite>
+    <sprite>sprites\spr_light</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -89,8 +88,8 @@
   <objects name="objects">
     <objects name="object_characters">
       <object>objects\obj_player</object>
-      <object>objects\obj_benemy</object>
-      <object>objects\obj_renemy</object>
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_nofall</object>
       <object>objects\obj_boss_front</object>
     </objects>
     <objects name="obj_buttons">
@@ -106,8 +105,6 @@
       <object>objects\obj_heart</object>
       <object>objects\obj_health_pack</object>
     </objects>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_enemy_nofall</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_bullet1</object>
     <object>objects\obj_arrow</object>
@@ -127,6 +124,7 @@
     <object>objects\obj_door1</object>
     <object>objects\obj_door2</object>
     <object>objects\obj_door3</object>
+    <object>objects\obj_door4</object>
     <object>objects\obj_nasko</object>
     <object>objects\obj_nasko2</object>
     <object>objects\obj_menu</object>
@@ -134,9 +132,9 @@
     <object>objects\obj_score</object>
     <object>objects\obj_draw_highscore</object>
     <object>objects\obj_text</object>
-    <object>objects\obj_button_accept</object>
     <object>objects\obj_playr_menu</object>
     <object>objects\obj_quit</object>
+    <object>objects\obj_darkness</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
@@ -148,6 +146,8 @@
     <room>rooms\bonus_rm1</room>
     <room>rooms\rm_3</room>
     <room>rooms\bonus_rm2</room>
+    <room>rooms\rm_4</room>
+    <room>rooms\bonus_rm3</room>
     <room>rooms\rm_highscore_table</room>
   </rooms>
   <help>

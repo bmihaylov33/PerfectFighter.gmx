@@ -5,24 +5,10 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemy</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>spr_collision</maskName>
   <events>
     <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -39,14 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir  = -1;
+            <string>///Initialize Variables
+
+dir  = -1;
 movespeed = 3;
 movepad = 3;
 grav = 0.5;
 hsp = 0;
 vsp = 0;
-facing = 0;
-hp= 200;
+facing = -1;
+hp = 110;
 fearofhights = 1;
 state = e_state.idle;
 </string>
@@ -71,7 +59,9 @@ state = e_state.idle;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.pause) exit;
+            <string>///Movement
+
+if (global.pause) exit;
 
 switch (state) {
     case e_state.idle: {
@@ -94,6 +84,15 @@ vsp += grav;
 
 //Horizontal Collision
 if (place_meeting(x+hsp,y,obj_wall)) {
+
+     if (facing = -1) {
+        sprite_index = spr_boss_left;
+        facing = 1;
+        } else if (facing = 1){
+        sprite_index = spr_boss;
+        facing = -1;
+        }
+        
     while(!place_meeting(x+sign(hsp),y,obj_wall)) {
         x += sign(hsp);
     }
@@ -107,12 +106,18 @@ x += hsp;
 if (place_meeting(x,y+vsp,obj_wall)) {
     while(!place_meeting(x,y+sign(vsp),obj_wall)) {
         y += sign(vsp);
-        
-        if (fearofhights) &amp;&amp; !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, obj_wall) {
+     }
+     vsp = 0;   
+     if (fearofhights) &amp;&amp; !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, obj_wall) {
+        if (facing = -1) {
+        sprite_index = spr_boss_left;
+        facing = 1;
+        } else if (facing = 1){
+        sprite_index = spr_boss;
+        facing = -1;
+        }
         dir *= -1;
-    }
-    }
-    vsp = 0;
+     }
 }
 y += vsp;
 </string>
@@ -193,7 +198,7 @@ y += vsp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp -= 5;
+            <string>hp -= 2;
 </string>
           </argument>
         </arguments>

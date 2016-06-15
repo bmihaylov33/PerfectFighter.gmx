@@ -3,8 +3,8 @@
   <spriteName>spr_pause</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
-  <persistent>-1</persistent>
+  <depth>-1000</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(fn_score);
+            <string>draw_set_font(fn_menu);
 if (global.pause) {
     draw_set_color(c_black);
     draw_set_alpha(0.5);
